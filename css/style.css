@@ -1,0 +1,102 @@
+html{
+    height: 100%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.wrapper{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+}
+
+.block{
+    position: absolute;
+    border: 1px solid black;
+    background: #fff;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 50px;
+}
+.inner{
+    min-height: inherit;
+    margin: 6px 6px;
+    margin-right: 15px;
+    border-radius: inherit;
+}
+.plus{
+    right: 0;
+    top: 50%;
+    position: absolute;
+    transform: translate(50%, -50%);
+    border-radius: 100%;
+    border: 2px solid green;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+}
+.plus::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f00;
+}
+.plus::after{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f00;
+}
+svg{
+    position: absolute;
+    z-index: -999;
+}
+line{
+    z-index: -90;
+}
+.deleteButton{
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: translate(-45%, -45%);
+    border-radius: 100%;
+    border: 2px solid red;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+.block:hover .deleteButton{
+    display: block;
+}
+.deleteButton::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #f00;
+}
+.deleteButton::after{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #f00;
+}
